@@ -1,3 +1,4 @@
+/*method 1*/
 // var containsDuplicate = function(nums) {
 //   nums.sort();
 //   for (let i = 0; i < nums.length - 1; i++) {
@@ -8,7 +9,15 @@
 //   return false;
 // };
 
+/*method 2*/
+// var containsDuplicate = function(nums) {
+//   let setNums = new Set([...nums]);
+//   return setNums.size === nums.length ? false : true;
+// };
+
+/*method 3*/
+
 var containsDuplicate = function(nums) {
-  let setNums = new Set([...nums]);
-  return setNums.size === nums.length ? false : true;
+  let setNums = new Set(nums);
+  return setNums.size < nums.length;
 };
